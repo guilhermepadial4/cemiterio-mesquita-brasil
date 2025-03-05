@@ -2,10 +2,10 @@
 
 .about {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: $background-medium;
-  max-width: 800px; // Adicionado largura máxima
-  margin: 0 auto; // Centralizar o conteúdo
+  max-width: 800px;
+  margin: 0 auto;
 
   h2 {
     font-size: 2.5rem;
@@ -14,45 +14,61 @@
 
   p {
     font-size: 1rem;
-    line-height: 1.6; // Adicionado espaçamento entre linhas
+    line-height: 1.8;
     margin-bottom: 15px;
+  }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 60px 5%;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 768px) {
   .about {
-    padding: 40px 15px; // Ajustado padding para telas menores
+    padding: 50px 10px;
+    max-width: 95%;
 
     h2 {
-      font-size: 2rem; // Ajustado tamanho da fonte para telas menores
+      font-size: 2rem;
     }
 
     p {
-      font-size: 0.9rem; // Ajustado tamanho da fonte para telas menores
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
   }
 }
 
 @media (max-width: 480px) {
   .about {
+    padding: 40px 10px;
+
     h2 {
       font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .about {
+    padding: 30px 5px;
+
+    h2 {
+      font-size: 1.5rem;
     }
 
     p {
       font-size: 0.85rem;
     }
   }
-}
-
-@media (max-width: 320px) {
-    .about{
-        padding: 30px 10px;
-        h2{
-            font-size: 1.5rem;
-        }
-        p{
-            font-size: 0.8rem;
-        }
-    }
 }
