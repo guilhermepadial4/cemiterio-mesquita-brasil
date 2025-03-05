@@ -4,8 +4,55 @@
   text-align: center;
   padding: 60px 20px;
   background-color: $background-medium;
+  max-width: 800px; // Adicionado largura máxima
+  margin: 0 auto; // Centralizar o conteúdo
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
 
   p {
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.6; // Adicionado espaçamento entre linhas
+    margin-bottom: 15px;
   }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 15px; // Ajustado padding para telas menores
+
+    h2 {
+      font-size: 2rem; // Ajustado tamanho da fonte para telas menores
+    }
+
+    p {
+      font-size: 0.9rem; // Ajustado tamanho da fonte para telas menores
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+    .about{
+        padding: 30px 10px;
+        h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
 }

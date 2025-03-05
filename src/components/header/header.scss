@@ -6,7 +6,7 @@ header {
   align-items: center;
   color: $white;
   background-color: $primary-color;
-  padding: 20px;
+  padding: 15px 20px; // Ajuste de padding
 
   img {
     width: 100px;
@@ -19,6 +19,7 @@ header {
     font-size: 24px;
     color: $white;
     cursor: pointer;
+    padding: 8px; // Adicionado padding para melhor usabilidade
   }
 
   nav {
@@ -39,12 +40,14 @@ header {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 80px;
+      top: 60px; // Ajustado para melhor adaptação
       left: 0;
       width: 100%;
       background-color: $primary-color;
-      padding: 20px;
-      z-index: 10;
+      padding: 15px; // Ajuste de padding
+      z-index: 100; // Ajuste de z-index
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adicionado box-shadow
+      transition: all 0.3s ease; // Adicionado transição
     }
   }
 }
@@ -69,7 +72,18 @@ header {
 }
 
 @media (max-width: 480px) {
+  header {
+    img {
+      width: 80px;
+    }
+    nav a {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
   header img {
-    width: 80px;
+    width: 70px;
   }
 }

@@ -5,4 +5,26 @@ footer {
   color: $white;
   background-color: $primary-color;
   padding: 30px 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 320px) {
+  footer {
+    padding: 15px 10px;
+    font-size: 0.8rem;
+  }
 }
