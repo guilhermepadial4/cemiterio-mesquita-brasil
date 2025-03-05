@@ -1,11 +1,11 @@
-import mosqueImage from '../assets/mosque.jpg';
-import gravesImage from '../assets/graves.jpg';
-
 import './home.scss';
 import { Header } from '../components/header/Header';
 import { Hero } from '../components/hero/Hero';
 import { About } from '../components/about/About';
 import { Services } from '../components/services/Services';
+import { Gallery } from '../components/gallery/Gallery';
+import { Contact } from '../components/contact/Contact';
+import { Footer } from '../components/footer/Footer';
 
 export function Home() {
   return (
@@ -19,30 +19,12 @@ export function Home() {
 
         <Services />
 
-        <section className="gallery">
-          <h2>Galeria</h2>
-          <div className="gallery-images">
-            <img src={gravesImage} alt="Túmulos no cemitério" />
-            <img src={mosqueImage} alt="Mesquita do cemitério" />
-            <img src={gravesImage} alt="Túmulos no cemitério" />
-            <img src={mosqueImage} alt="Mesquita do cemitério" />
-          </div>
-        </section>
+        <Gallery />
 
-        <section id="contact" className="contact">
-          <h2>Contato</h2>
-          <p>
-            Para mais informações ou em caso de necessidade, entre em contato conosco. Estamos à disposição para atendê-lo com respeito e
-            compaixão.
-          </p>
-          <p>Telefone: (11) 99999-9999</p>
-          <p>Email: contato@cemiterioislamico.com.br</p>
-        </section>
+        <Contact />
       </main>
 
-      <footer>
-        <p>&copy; 2025 Mesquita Brasil. Todos os direitos reservados. By RastaIT</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

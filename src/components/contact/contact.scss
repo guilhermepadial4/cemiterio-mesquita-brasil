@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss' as *;
+
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+
+  background-color: $background-medium;
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact p {
+    font-size: 16px;
+  }
+}
