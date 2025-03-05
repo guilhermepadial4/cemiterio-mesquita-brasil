@@ -1,0 +1,75 @@
+@use '../../styles/variables.scss' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  background-color: $primary-color;
+  padding: 20px;
+
+  img {
+    width: 100px;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: $white;
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+
+    a {
+      font-size: 18px;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary-light;
+      }
+    }
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: $primary-color;
+      padding: 20px;
+      z-index: 10;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    nav {
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    width: 80px;
+  }
+}
